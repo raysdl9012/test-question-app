@@ -26,11 +26,9 @@ export class SplashPage implements OnInit {
 
   private async managerData() {
     const listResult: IQuestion[] = await this._storage.get('question')
-
-    if (listResult.length == 0) {
+    if (!listResult || listResult.length == 0) {
       this.makeRequest();
     } else {
-      console.log(listResult);
       setTimeout(() => {
         this.goToHomApp();
       }, 500)

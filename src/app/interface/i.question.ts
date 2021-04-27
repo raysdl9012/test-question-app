@@ -5,4 +5,5 @@ export interface IQuestion {
   incorrect_answers: string[],
   question: string,
   type: string,
+  response?: boolean
 }

@@ -1,0 +1,42 @@
+.button-to-bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container-title{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    h3, h2{
+        text-align: center;
+        flex:1 1 auto;
+        color: rgb(177, 71, 22);
+    }
+    h2{
+        color: rgb(15, 168, 61);
+        font-size: 30px;
+    }
+}
+
+ion-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    object-fit: none;
+}

@@ -25,4 +25,8 @@ export class StorageService {
   public get(key: string) {
     return this.storage.get(key);
   }
+
+  public cleanDatabase(){
+    return this.storage.clear();
+  }
 }

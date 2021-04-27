@@ -1,9 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>question</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+
+  <ion-icon class="icon-close" (click)="closeQuestion()" name="close-outline"></ion-icon>
+
+  <div class="container-items" *ngIf="question">
+    <h2>{{question.category}}</h2>
+    <p class="text-question">{{question.question}}</p>
+    <p>{{indexQuestion + 1}} / {{listResult.length}}</p>
+    <div class="container-buttons" *ngIf="indexQuestion < 9">
+      <ion-button (click)="responseQuestion('True')" size="default" color="danger">TRUE</ion-button>
+      <ion-button (click)="responseQuestion('False')" size="default" color="success">FALSE</ion-button>
+    </div>
+  </div>
+
+
+
+  <!-- <div class="container-buttons-controls">
+    <ion-button (click)="lastQuestion()" *ngIf="indexQuestion > 0" size="small" color="tertiary">Last</ion-button>
+    <ion-button (click)="nextQuestion()" size="small" color="warning">Next</ion-button>
+  </div> -->
+
+  <ion-button *ngIf="indexQuestion == 9" expand="full" (click)="showResult()" size="default" color="warning">Show Result</ion-button>
 
 </ion-content>
